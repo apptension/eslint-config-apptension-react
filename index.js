@@ -53,7 +53,7 @@ module.exports = {
     'react/jsx-filename-extension': 0,
     'react/jsx-first-prop-new-line': 0,
     'react/jsx-handler-names': 0,
-    'react/jsx-indent': [2, 2, {indentLogicalExpressions: true}],
+    'react/jsx-indent': 0,
     'react/jsx-indent-props': 0,
     'react/jsx-key': 0,
     'react/jsx-max-props-per-line': 0,
