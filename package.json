@@ -1,0 +1,28 @@
+{
+  "name": "eslint-config-apptension-react",
+  "version": "0.0.1",
+  "description": "ESLint configuration for Apptension's React projects.",
+  "main": "index.js",
+  "scripts": {
+    "release": "npm run release-patch",
+    "release-patch": "git checkout master; git commit -a -m 'Build dist/'; npm version patch && git push origin master --tags && npm publish",
+    "release-minor": "git checkout master; git commit -a -m 'Build dist/'; npm version minor && git push origin master --tags && npm publish",
+    "release-major": "git checkout master; git commit -a -m 'Build dist/'; npm version major && git push origin master --tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apptension/eslint-config-apptension-react.git"
+  },
+  "author": "Apptension",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apptension/eslint-config-apptension-react/issues"
+  },
+  "homepage": "https://github.com/apptension/eslint-config-apptension-react#readme",
+  "dependencies": {
+    "eslint-config-apptension": "^1.1.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-react": "^6.10.0",
+    "eslint-plugin-redux-saga": "^0.3.0"
+  }
+}
