@@ -24,17 +24,17 @@ module.exports = {
     },
     'import/extensions': [
       '.js',
-      '.jsx',
+      '.jsx'
     ],
     'import/core-modules': [
     ],
     'import/ignore': [
       'node_modules',
-      '\\.(coffee|scss|css|less|hbs|svg|json)$',
-    ],
+      '\\.(coffee|scss|css|less|hbs|svg|json)$'
+    ]
   },
 
-  extends: [
+  'extends': [
     'apptension'
   ],
 
@@ -80,7 +80,7 @@ module.exports = {
         'everything-else',
         '/^render.+$/',
         'render'
-      ],
+      ]
     }],
     'react/sort-prop-types': 0,
     'react/style-prop-object': 0,
@@ -112,7 +112,7 @@ module.exports = {
     'react/jsx-wrap-multilines': [2, {
       declaration: true,
       assignment: true,
-      return: true
+      'return': true
     }],
 
     'import/no-unresolved': [2, { commonjs: true, caseSensitive: true }],
