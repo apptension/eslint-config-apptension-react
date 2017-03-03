@@ -1,15 +1,43 @@
 module.exports = {
   plugins: [
-    'react'
+    'react',
+    'import'
   ],
+
+  env: {
+    es6: true
+  },
+
   parserOptions: {
     ecmaFeatures: {
       jsx: true
-    }
+    },
+    ecmaVersion: 6,
+    sourceType: 'module'
   },
+
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.json']
+      }
+    },
+    'import/extensions': [
+      '.js',
+      '.jsx',
+    ],
+    'import/core-modules': [
+    ],
+    'import/ignore': [
+      'node_modules',
+      '\\.(coffee|scss|css|less|hbs|svg|json)$',
+    ],
+  },
+
   extends: [
     'apptension'
   ],
+
   rules: {
     'jsx-quotes': [2, 'prefer-double'],
 
@@ -85,6 +113,64 @@ module.exports = {
       declaration: true,
       assignment: true,
       return: true
-    }]
+    }],
+
+    'import/no-unresolved': [2, { commonjs: true, caseSensitive: true }],
+    'import/named': 0,
+    'import/default': 0,
+    'import/namespace': 0,
+    'import/export': 2,
+    'import/no-named-as-default': 2,
+    'import/no-named-as-default-member': 2,
+    'import/no-deprecated': 0,
+    'import/no-extraneous-dependencies': [2, {
+      devDependencies: [
+        'test/**',
+        'tests/**',
+        'spec/**',
+        '**/__tests__/**',
+        'test.js',
+        'test-*.js',
+        '**/*.test.js',
+        '**/*.spec.js',
+        '**/webpack.config.js',
+        '**/webpack.config.*.js',
+        '**/rollup.config.js',
+        '**/gulpfile.js',
+        '**/gulpfile.*.js',
+        '**/Gruntfile'
+      ],
+      optionalDependencies: false
+    }],
+
+    'import/no-mutable-exports': 2,
+    'import/no-commonjs': 0,
+    'import/no-amd': 2,
+    'import/no-nodejs-modules': 0,
+    'import/first': [2, 'absolute-first'],
+    'import/imports-first': 0,
+    'import/no-duplicates': 2,
+    'import/no-namespace': 0,
+    'import/extensions': [2, 'always', {
+      js: 'never',
+      jsx: 'never'
+    }],
+    'import/order': [0, {
+      groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+      'newlines-between': 'never'
+    }],
+    'import/newline-after-import': 2,
+    'import/prefer-default-export': 0,
+    'import/no-restricted-paths': 0,
+    'import/max-dependencies': 0,
+    'import/no-absolute-path': 2,
+    'import/no-dynamic-require': 2,
+    'import/no-internal-modules': [0, {
+      allow: []
+    }],
+    'import/unambiguous': 0,
+    'import/no-webpack-loader-syntax': 2,
+    'import/no-unassigned-import': 0,
+    'import/no-named-default': 2
   }
 };
