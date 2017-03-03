@@ -41,7 +41,17 @@ module.exports = {
     'react/require-optimization': 0,
     'react/require-render-return': 2,
     'react/self-closing-comp': 0,
-    'react/sort-comp': 1,
+    'react/sort-comp': ['error', {
+      order: [
+        'static-methods',
+        'lifecycle',
+        '/^on.+$/',
+        '/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
+        'everything-else',
+        '/^render.+$/',
+        'render'
+      ],
+    }],
     'react/sort-prop-types': 0,
     'react/style-prop-object': 0,
     'react/void-dom-elements-no-children': 0,
