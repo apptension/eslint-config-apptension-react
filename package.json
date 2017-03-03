@@ -13,6 +13,12 @@
     "type": "git",
     "url": "git+https://github.com/apptension/eslint-config-apptension-react.git"
   },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "apptension"
+  ],
   "author": "Apptension",
   "license": "ISC",
   "bugs": {
