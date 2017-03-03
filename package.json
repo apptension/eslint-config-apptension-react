@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-apptension-react",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "ESLint configuration for Apptension's React projects.",
   "main": "index.js",
   "scripts": {
