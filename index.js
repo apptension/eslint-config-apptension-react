@@ -11,6 +11,8 @@ module.exports = {
     'apptension'
   ],
   rules: {
+    'jsx-quotes': [2, 'prefer-double'],
+
     'react/display-name': 2,
     'react/forbid-component-props': 0,
     'react/forbid-elements': 0,
@@ -18,7 +20,7 @@ module.exports = {
     'react/forbid-foreign-prop-types': 0,
     'react/no-array-index-key': 0,
     'react/no-children-prop': 0,
-    'react/no-danger': 0,
+    'react/no-danger': 1,
     'react/no-danger-with-children': 0,
     'react/no-deprecated': 2,
     'react/no-did-mount-set-state': 0,
@@ -41,7 +43,7 @@ module.exports = {
     'react/require-optimization': 0,
     'react/require-render-return': 2,
     'react/self-closing-comp': 0,
-    'react/sort-comp': ['error', {
+    'react/sort-comp': [2, {
       order: [
         'static-methods',
         'lifecycle',
@@ -57,7 +59,7 @@ module.exports = {
     'react/void-dom-elements-no-children': 0,
 
     'react/jsx-boolean-value': 0,
-    'react/jsx-closing-bracket-location': 1,
+    'react/jsx-closing-bracket-location': [1, 'line-aligned'],
     'react/jsx-curly-spacing': [2, 'never'],
     'react/jsx-equals-spacing': 0,
     'react/jsx-filename-extension': 0,
@@ -79,6 +81,10 @@ module.exports = {
     'react/jsx-tag-spacing': 0,
     'react/jsx-uses-react': 2,
     'react/jsx-uses-vars': 2,
-    'react/jsx-wrap-multilines': 0
+    'react/jsx-wrap-multilines': [2, {
+      declaration: true,
+      assignment: true,
+      return: true
+    }]
   }
 };
