@@ -159,7 +159,7 @@ module.exports = {
       groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
       'newlines-between': 'never'
     }],
-    'import/newline-after-import': 2,
+    'import/newline-after-import': 0,
     'import/prefer-default-export': 0,
     'import/no-restricted-paths': 0,
     'import/max-dependencies': 0,
