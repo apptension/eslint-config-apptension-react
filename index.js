@@ -1,7 +1,8 @@
 module.exports = {
   plugins: [
     'react',
-    'import'
+    'import',
+    'redux-saga'
   ],
 
   env: {
@@ -171,6 +172,10 @@ module.exports = {
     'import/unambiguous': 0,
     'import/no-webpack-loader-syntax': 2,
     'import/no-unassigned-import': 0,
-    'import/no-named-default': 2
+    'import/no-named-default': 2,
+
+    'redux-saga/yield-effects': 2,
+    'redux-saga/no-yield-in-race': 2,
+    'redux-saga/no-unhandled-errors': 1
   }
 };

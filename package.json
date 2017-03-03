@@ -29,7 +29,8 @@
     "babel-eslint": "^7.1.1",
     "eslint-config-apptension": "^1.1.2",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-react": "^6.10.0"
+    "eslint-plugin-react": "^6.10.0",
+    "eslint-plugin-redux-saga": "^0.3.0"
   },
   "devDependencies": {
     "eslint": "^3.16.1"
