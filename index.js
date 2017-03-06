@@ -181,7 +181,7 @@ module.exports = {
 
     'babel/new-cap': 1,
     'babel/object-curly-spacing': [2, 'always'],
-    'babel/no-invalid-this': 1,
-    'babel/semi': 1
+    'babel/no-invalid-this': 0,
+    'babel/semi': 0
   }
 };
