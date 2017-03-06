@@ -2,7 +2,8 @@ module.exports = {
   plugins: [
     'react',
     'import',
-    'redux-saga'
+    'redux-saga',
+    'babel'
   ],
 
   env: {
@@ -176,6 +177,11 @@ module.exports = {
 
     'redux-saga/yield-effects': 2,
     'redux-saga/no-yield-in-race': 2,
-    'redux-saga/no-unhandled-errors': 1
+    'redux-saga/no-unhandled-errors': 1,
+
+    'babel/new-cap': 1,
+    'babel/object-curly-spacing': 1,
+    'babel/no-invalid-this': 1,
+    'babel/semi': 1
   }
 };
