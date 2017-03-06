@@ -180,7 +180,7 @@ module.exports = {
     'redux-saga/no-unhandled-errors': 1,
 
     'babel/new-cap': 1,
-    'babel/object-curly-spacing': 1,
+    'babel/object-curly-spacing': [2, 'always'],
     'babel/no-invalid-this': 1,
     'babel/semi': 1
   }
