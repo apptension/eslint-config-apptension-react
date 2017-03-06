@@ -179,9 +179,13 @@ module.exports = {
     'redux-saga/no-yield-in-race': 2,
     'redux-saga/no-unhandled-errors': 1,
 
-    'babel/new-cap': 1,
+    'new-cap': 0,
+    'no-invalid-this': 0,
+    'semi': 0,
+
+    'babel/new-cap': [2, { 'capIsNew': false }],
     'babel/object-curly-spacing': [2, 'always'],
-    'babel/no-invalid-this': 0,
-    'babel/semi': 0
+    'babel/no-invalid-this': 2,
+    'babel/semi': 2
   }
 };
