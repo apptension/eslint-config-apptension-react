@@ -3,55 +3,63 @@ module.exports = {
     'react',
     'import',
     'redux-saga',
-    'babel'
+    'babel',
   ],
 
   env: {
-    es6: true
+    es6: true,
   },
 
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 6,
-    sourceType: 'module'
+    sourceType: 'module',
   },
 
   settings: {
+    react: {
+      version: 'detect',
+    },
     'import/resolver': {
       node: {
-        extensions: ['.js', '.json']
-      }
+        extensions: ['.js', '.jsx', '.json'],
+      },
     },
     'import/extensions': [
       '.js',
-      '.jsx'
+      '.jsx',
     ],
     'import/core-modules': [
     ],
     'import/ignore': [
       'node_modules',
-      '\\.(coffee|scss|css|less|hbs|svg|json)$'
-    ]
+      '\\.(coffee|scss|css|less|hbs|svg|json)$',
+    ],
   },
 
   'extends': [
-    'apptension'
+    'apptension',
   ],
 
   rules: {
     'jsx-quotes': [2, 'prefer-double'],
 
+    'react/boolean-prop-naming': 2,
+    'react/button-has-type': 2,
+    'react/default-props-match-prop-types': 2,
     'react/display-name': 2,
     'react/forbid-component-props': 0,
+    'react/forbid-dom-props': 0,
     'react/forbid-elements': 0,
     'react/forbid-prop-types': 0,
-    'react/forbid-foreign-prop-types': 0,
+    'react/forbid-foreign-prop-types': 1,
+    'react/no-access-state-in-setstate': 2,
     'react/no-array-index-key': 0,
-    'react/no-children-prop': 0,
+    'react/no-children-prop': 2,
     'react/no-danger': 1,
-    'react/no-danger-with-children': 0,
+    'react/no-danger-with-children': 2,
     'react/no-deprecated': 2,
     'react/no-did-mount-set-state': 0,
     'react/no-did-update-set-state': 0,
@@ -59,20 +67,26 @@ module.exports = {
     'react/no-find-dom-node': 2,
     'react/no-is-mounted': 2,
     'react/no-multi-comp': 0,
+    'react/no-redundant-should-component-update': 2,
     'react/no-render-return-value': 2,
     'react/no-set-state': 0,
-    'react/no-string-refs': 1,
+    'react/no-typos': 2,
+    'react/no-string-refs': 2,
+    'react/no-this-in-sfc': 2,
     'react/no-unescaped-entities': 0,
     'react/no-unknown-property': 2,
-    'react/no-unused-prop-types': 0,
-    'react/prefer-es6-class': 0,
+    'react/no-unsafe': 2,
+    'react/no-unused-prop-types': 2,
+    'react/no-unused-state': 2,
+    'react/no-will-update-set-state': 2,
+    'react/prefer-es6-class': 2,
     'react/prefer-stateless-function': 0,
     'react/prop-types': 2,
     'react/react-in-jsx-scope': 2,
     'react/require-default-props': 0,
     'react/require-optimization': 0,
     'react/require-render-return': 2,
-    'react/self-closing-comp': 0,
+    'react/self-closing-comp': 2,
     'react/sort-comp': [2, {
       order: [
         'static-methods',
@@ -80,46 +94,62 @@ module.exports = {
         '/^on.+$/',
         '/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
         'everything-else',
+        '/^handle.+$/',
         '/^render.+$/',
-        'render'
-      ]
+        'render',
+      ],
     }],
-    'react/sort-prop-types': 0,
-    'react/style-prop-object': 0,
-    'react/void-dom-elements-no-children': 0,
+    'react/sort-prop-types': [2, {
+      callbacksLast: true,
+      requiredFirst: false,
+      sortShapeProp: false,
+      noSortAlphabetically: true,
+    }],
+    'react/style-prop-object': 1,
+    'react/void-dom-elements-no-children': 2,
 
-    'react/jsx-boolean-value': 0,
+    'react/jsx-boolean-value': [2, 'never'],
+    'react/jsx-child-element-spacing': 0,
     'react/jsx-closing-bracket-location': [1, 'line-aligned'],
+    'react/jsx-closing-tag-location': 2,
     'react/jsx-curly-spacing': [2, 'never'],
-    'react/jsx-equals-spacing': 0,
-    'react/jsx-filename-extension': 0,
-    'react/jsx-first-prop-new-line': 0,
-    'react/jsx-handler-names': 0,
-    'react/jsx-indent': 0,
-    'react/jsx-indent-props': 0,
-    'react/jsx-key': 0,
-    'react/jsx-max-props-per-line': 0,
-    'react/jsx-no-bind': 0,
+    'react/jsx-equals-spacing': [2, 'never'],
+    'react/jsx-filename-extension': [2, { 'extensions': ['.js', '.jsx'] }],
+    'react/jsx-first-prop-new-line': [2, 'multiline-multiprop'],
+    'react/jsx-handler-names': 2,
+    'react/jsx-indent': [2, 2, { checkAttributes: true }],
+    'react/jsx-indent-props': [2, 2],
+    'react/jsx-key': 2,
+    'react/jsx-max-props-per-line': [2, { 'when': 'multiline' }],
+    'react/jsx-no-bind': [2, {
+      allowArrowFunctions: true,
+    }],
     'react/jsx-no-comment-textnodes': 0,
-    'react/jsx-no-duplicate-props': 2,
+    'react/jsx-no-duplicate-props': [2, { ignoreCase: true }],
     'react/jsx-no-literals': 0,
-    'react/jsx-no-target-blank': 0,
+    'react/jsx-no-target-blank': 2,
     'react/jsx-no-undef': 2,
-    'react/jsx-pascal-case': 0,
+    'react/jsx-one-expression-per-line': 0,
+    'react/jsx-curly-brace-presence': 0,
+    'react/jsx-fragments': 0,
+    'react/jsx-pascal-case': [2, { allowAllCaps: true, ignore: [] }],
+    'react/jsx-props-no-multi-spaces': 2,
+    'react/jsx-sort-default-props': 0,
     'react/jsx-sort-props': 0,
-    'react/jsx-space-before-closing': 2,
-    'react/jsx-tag-spacing': 0,
+    'react/jsx-space-before-closing': 0,
+    'react/jsx-tag-spacing': [2, {
+      closingSlash: 'never',
+      beforeSelfClosing: 'always',
+      afterOpening: 'never',
+      beforeClosing: 'allow',
+    }],
     'react/jsx-uses-react': 2,
     'react/jsx-uses-vars': 2,
-    'react/jsx-wrap-multilines': [2, {
-      declaration: true,
-      assignment: true,
-      'return': true
-    }],
+    'react/jsx-wrap-multilines': 2,
 
     'import/no-unresolved': [2, { commonjs: true, caseSensitive: true }],
-    'import/named': 0,
-    'import/default': 0,
+    'import/named': 2,
+    'import/default': 2,
     'import/namespace': 0,
     'import/export': 2,
     'import/no-named-as-default': 2,
@@ -140,9 +170,9 @@ module.exports = {
         '**/rollup.config.js',
         '**/gulpfile.js',
         '**/gulpfile.*.js',
-        '**/Gruntfile'
+        '**/Gruntfile',
       ],
-      optionalDependencies: false
+      optionalDependencies: false,
     }],
 
     'import/no-mutable-exports': 2,
@@ -150,30 +180,39 @@ module.exports = {
     'import/no-amd': 2,
     'import/no-nodejs-modules': 0,
     'import/first': [2, 'absolute-first'],
-    'import/imports-first': 0,
+    'import/exports-last': 0,
     'import/no-duplicates': 2,
     'import/no-namespace': 0,
     'import/extensions': [2, 'always', {
       js: 'never',
-      jsx: 'never'
+      jsx: 'never',
     }],
     'import/order': [0, {
       groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-      'newlines-between': 'never'
+      'newlines-between': 'never',
     }],
-    'import/newline-after-import': 0,
+    'import/newline-after-import': [2, { count: 2 }],
     'import/prefer-default-export': 0,
     'import/no-restricted-paths': 0,
     'import/max-dependencies': 0,
     'import/no-absolute-path': 2,
     'import/no-dynamic-require': 2,
     'import/no-internal-modules': [0, {
-      allow: []
+      allow: [],
     }],
+    'import/no-self-import': 2,
+    'import/no-cycle': 2,
+    'import/no-useless-path-segments': 2,
+    'import/no-relative-parent-imports': 0,
     'import/unambiguous': 0,
     'import/no-webpack-loader-syntax': 2,
     'import/no-unassigned-import': 0,
     'import/no-named-default': 2,
+    'import/no-default-export': 0,
+    'import/no-named-export': 0,
+    'import/no-anonymous-default-export': 0,
+    'import/group-exports': 0,
+    'import/dynamic-import-chunkname': 2,
 
     'redux-saga/yield-effects': 2,
     'redux-saga/no-yield-in-race': 2,
@@ -186,6 +225,6 @@ module.exports = {
     'babel/new-cap': [2, { 'capIsNew': false }],
     'babel/object-curly-spacing': [2, 'always'],
     'babel/no-invalid-this': 2,
-    'babel/semi': 2
-  }
+    'babel/semi': 2,
+  },
 };
