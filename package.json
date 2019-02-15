@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-apptension-react-tmp",
+  "name": "@apptension/eslint-config-react",
   "version": "0.1.0",
   "description": "ESLint configuration for Apptension's React projects.",
   "main": "index.js",
@@ -26,8 +26,8 @@
   },
   "homepage": "https://github.com/apptension/eslint-config-apptension-react#readme",
   "dependencies": {
+    "@apptension/eslint-config": "^1.3.0",
     "babel-eslint": "^10.0.1",
-    "eslint-config-apptension": "^1.1.3",
     "eslint-plugin-babel": "^4.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-react": "^7.12.3",
